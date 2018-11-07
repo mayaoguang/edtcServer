@@ -21,6 +21,7 @@ contract EducationLock{
     }
     
     function transferFrom_test(address _from, address _to, uint256 _value) public{
+        emit Log("OutTransferFrom", _from, _value);
         edu_token.transferFrom(_from, _to, _value);
         emit OutTransferFrom(_from, _to, _value);
     }
